@@ -1,9 +1,19 @@
-FROM python:3.8-slim-buster
+FROM python:3.11-slim
 
-RUN apt update -y && apt install awscli -y
 WORKDIR /app
 
-COPY . /app
-RUN pip install -r requirements.txt
+# Install AWS CLI
+RUN apt-get update && \
+    apt-get install -y awscli && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-CMD ["python3", "app.py"]
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8080
+
+CMD ["python", "app.py"]
