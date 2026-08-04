@@ -2,7 +2,6 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install AWS CLI
 RUN apt-get update && \
     apt-get install -y awscli && \
     apt-get clean && \
@@ -10,6 +9,9 @@ RUN apt-get update && \
 
 COPY requirements.txt .
 
+RUN echo "===== requirements.txt =====" && cat requirements.txt
+
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
