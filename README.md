@@ -173,19 +173,13 @@ The complete pipeline includes:
 
 * NumPy
 * Pandas
-* OpenCV
-
-### Visualization
-
-* Matplotlib
-* Seaborn
 
 ### Deployment
 
-* Flask / FastAPI
+* Flask
 * Docker
 * GitHub
-* AWS / Render
+* Render
 
 ### MLOps
 
