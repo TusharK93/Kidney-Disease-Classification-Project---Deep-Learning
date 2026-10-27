@@ -229,3 +229,6 @@ Kidney-Disease-Classification-Project---Deep-Learning/
 ## 📄 License
 
 Add a `LICENSE` file to the repository to specify how others may use, modify, and distribute this project. Until then, do not assume the repository is licensed for reuse.
+<p align="center">
+  <img src="kidney disease.jpg"" alt=""Kidney Disease Classification" width="100%">
+</p>
